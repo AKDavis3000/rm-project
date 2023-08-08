@@ -1,18 +1,16 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaSpaceShuttle } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Navbar() {
-  // const shuttle = document.querySelector('.fa-shuttle');
-  // const rotate = document.querySelector('.rotate');
-  // const visible = document.querySelector('.visible');
-  // const navUl = document.querySelector('.nav_ul');
+  const [clicked, setClicked] = useState(false);
 
-  // function handleClick() {
-  //   shuttle.current.classList.toggle('rotate');
-  //   navUl.current.classList.toggle('visible');
-  // }
+  function handleClick() {
+    setClicked((prevState) => !prevState);
+  }
 
   return (
     <header className="header_wrapper">
@@ -21,9 +19,13 @@ export default function Navbar() {
         alt="rick and morty logo"
         width={200}
         height={100}
+        className="rm_logo"
       />
-      <FaSpaceShuttle className="fa-shuttle" />
-      <nav className="nav_wrapper">
+      <FaSpaceShuttle
+        className={clicked ? 'fa-shuttle rotate' : 'fa-shuttle'}
+        onClick={handleClick}
+      />
+      <nav className={clicked ? 'nav_wrapper' : 'nav_wrapper active'}>
         <ul className="nav_ul">
           <li>
             <Link
@@ -34,7 +36,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/play"
+              href="/Play"
               className="links">
               Play!
             </Link>
