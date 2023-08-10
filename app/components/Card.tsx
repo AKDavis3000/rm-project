@@ -5,7 +5,7 @@ import '../scss/styles.scss';
 
 export default function Card() {
   return (
-    <section>
+    <section className="section_card_wrapper">
       <div className="card_wrapper">
         <div className="img_wrapper">
           <Image
@@ -14,14 +14,15 @@ export default function Card() {
             width={150}
             height={150}
             className="img"
+            layout="true"
           />
         </div>
         <div className="info_wrapper">
-          <div></div>
+          <div className="line"></div>
           <p>Name: insert name</p>
-          <div></div>
+          <div className="line"></div>
           <p>Gender: insert gender</p>
-          <div></div>
+          <div className="line"></div>
           <p>Location: insert location</p>
         </div>
       </div>
@@ -33,6 +34,7 @@ export default function Card() {
             width={150}
             height={150}
             className="img"
+            layout="true"
           />
         </div>
         <div className="info_wrapper">
@@ -52,6 +54,27 @@ export default function Card() {
             width={150}
             height={150}
             className="img"
+            layout="true"
+          />
+        </div>
+        <div className="info_wrapper">
+          <div></div>
+          <p>Name: insert name</p>
+          <div></div>
+          <p>Gender: insert gender</p>
+          <div></div>
+          <p>Location: insert location</p>
+        </div>
+      </div>
+      <div className="card_wrapper">
+        <div className="img_wrapper">
+          <Image
+            src="/characters_img/alien_rick.png"
+            alt="Annie from rick and morty."
+            width={150}
+            height={150}
+            className="img"
+            layout="true"
           />
         </div>
         <div className="info_wrapper">
