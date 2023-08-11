@@ -1,4 +1,4 @@
-export const cardInfo = [
+export const gameInfo = [
   {
     imgSrc: '/card_imgs/card_1.png',
     name: 'Tony',

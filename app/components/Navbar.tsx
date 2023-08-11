@@ -1,15 +1,23 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { FaSpaceShuttle } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function Navbar() {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
-  function handleClick() {
-    setClicked((prevState) => !prevState);
+  // function handleClick() {
+  //   setClicked((prevState) => !prevState);
+  // }
+
+  const [ishovering, setIsHovering] = useState(false);
+  function handleMouseEnter() {
+    setIsHovering((prevState) => !prevState);
+  }
+  function handleMouseLeave() {
+    setIsHovering((prevState) => !prevState);
   }
 
   return (
@@ -22,11 +30,19 @@ export default function Navbar() {
         className="rm_logo"
       />
       <FaSpaceShuttle
-        className={clicked ? 'fa-shuttle rotate' : 'fa-shuttle'}
-        onClick={handleClick}
+        // className={clicked ? 'fa-shuttle rotate' : 'fa-shuttle'}
+        // onClick={handleClick}
+        className={ishovering ? 'fa-shuttle rotate' : 'fa-shuttle'}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       />
-      <nav className={clicked ? 'nav_wrapper' : 'nav_wrapper active'}>
-        <ul className="nav_ul">
+      {/* <nav className={clicked ? 'nav_wrapper' : 'nav_wrapper active'}> */}
+      <nav className={ishovering ? 'nav_wrapper' : 'nav_wrapper active'}>
+        {/* <ul className="nav_ul"> */}
+        <ul
+          className={ishovering ? 'nav_ul' : 'nav_ul active'}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
           <li>
             <Link
               href="/"

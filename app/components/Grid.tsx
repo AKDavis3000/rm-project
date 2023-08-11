@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export default function Grid() {
   return (
-    <section className="section_wrapper">
+    <section className="grid_section_wrapper">
       <div className="start_wrapper overlay">
         <p className="start_button">Click to start</p>
       </div>
