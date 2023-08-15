@@ -6,12 +6,6 @@ import { FaSpaceShuttle } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function Navbar() {
-  // const [clicked, setClicked] = useState(false);
-
-  // function handleClick() {
-  //   setClicked((prevState) => !prevState);
-  // }
-
   const [ishovering, setIsHovering] = useState(false);
   function handleMouseEnter() {
     setIsHovering((prevState) => !prevState);

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import '../scss/styles.scss';
 import GetAllCharacters from '@/lib/getAllCharacters';
 import { resourceLimits } from 'worker_threads';
-// import GetAllLocations from '@/lib/getAllLocations';
+import { cardInfo } from '@/assets/cardInfo';
 
 export default async function Card() {
   const characterData: Promise<RMCharacter[]> = GetAllCharacters();

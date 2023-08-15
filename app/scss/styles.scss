@@ -32,7 +32,7 @@ body {
 
     .nav_ul {
       // background-color: $blk;
-      background-color: green;
+      // background-color: green;
       width: 100%;
       position: absolute;
       top: -30px;
@@ -43,7 +43,8 @@ body {
         margin-block: 30px;
         color: white;
         font-size: 1.4em;
-        background-color: yellow;
+        // font-size: clamp();
+        // background-color: yellow;
 
         .links {
           color: white;
@@ -144,13 +145,13 @@ body {
 }
 
 .grid_section_wrapper {
-  background-color: $blk;
-  // background-color: $slimeGr;
+  // background-color: $blk;
+  background-color: $slimeGr;
   border-radius: 10px;
   width: 900px;
   height: 700px;
   margin: 10px auto;
-  position: relative;
+  // position: relative;
 
   .start_wrapper {
     height: 100%;
@@ -191,6 +192,7 @@ body {
     width: 800px;
     margin: 10px auto;
     padding-top: 10px;
+    color: white;
   }
 
   .reset_button {
@@ -199,7 +201,6 @@ body {
     left: 20%;
     padding: 5px 15px;
     background-color: $easternBl;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -210,30 +211,36 @@ body {
   }
 
   .counter {
-    color: white;
     font-size: 2.8em;
     position: absolute;
     left: 47%;
   }
 
   .timer {
-    color: white;
     float: right;
     margin-right: 15px;
     font-size: 2.8em;
   }
-}
 
-.cards {
-  position: unset;
-  height: 175px;
-  width: 175px;
-
-  .card_img {
-    object-fit: contain;
-    width: 100%;
+  .cards {
+    height: 175px;
+    width: 175px;
     position: relative;
-    height: unset;
+    background-color: red;
+    // margin-top: -30px;
+
+    .card_face {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .card_back {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      // visibility: hidden;
+    }
   }
 }
 
@@ -288,6 +295,41 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  .nav_wrapper {
+    display: flex;
+    background-color: red;
+    position: relative;
+
+    .nav_ul {
+      // position: absolute;
+      display: flex;
+      z-index: 0;
+      width: 50%;
+      height: 0;
+      // top: 0;
+      // right: 0;
+      margin-top: -75px;
+      margin-left: 68%;
+      background-color: yellow;
+
+      li {
+        margin: 0 60px;
+        background-color: peru;
+      }
+    }
+  }
+
+  .nav_ul.active {
+    display: flex;
+  }
+  .nav_wrapper.active {
+    display: flex;
+  }
+
+  .fa-shuttle {
+    display: none;
+  }
+
   .section_card_wrapper {
     display: flex;
     margin-top: 50px;
