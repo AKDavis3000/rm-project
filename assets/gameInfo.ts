@@ -16,7 +16,7 @@ export const gameInfo = [
     name: 'Morty',
   },
   {
-    imgSrc: '/card_imgs/card_5.png',
+    imgSrc: '/card_imgs/card_5.jpg',
     name: 'Portal Gun',
   },
   {
@@ -40,7 +40,7 @@ export const gameInfo = [
     name: 'Morty',
   },
   {
-    imgSrc: '/card_imgs/card_5.png',
+    imgSrc: '/card_imgs/card_5.jpg',
     name: 'Portal Gun',
   },
   {
@@ -49,11 +49,12 @@ export const gameInfo = [
   },
 ];
 
-export function randomizeCards(arr) {
-  // const random = gameInfo.sort(() => Math.random() - 0.5);
-  for (let i = arr.length - 1; i > 0; i--) {
+export function randomizeCards(array) {
+  for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return arr;
+  return array;
 }
+
+export const randomCards = randomizeCards(gameInfo);
