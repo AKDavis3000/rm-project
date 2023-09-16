@@ -1,5 +1,4 @@
 export default async function GetAllCharacters() {
-  // const randomChar = Math.floor(Math.random() * 20) + 1;
   const array = Array.from({ length: 20 }, (v, i) => i + 1);
 
   const shuffle = (arr) => {
