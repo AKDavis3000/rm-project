@@ -31,8 +31,7 @@ body {
     position: relative;
 
     .nav_ul {
-      // background-color: $blk;
-      // background-color: green;
+      background-color: $blk;
       width: 100%;
       position: absolute;
       top: -30px;
@@ -43,8 +42,6 @@ body {
         margin-block: 30px;
         color: white;
         font-size: 1.4em;
-        // font-size: clamp();
-        // background-color: yellow;
 
         .links {
           color: white;
@@ -90,15 +87,6 @@ body {
   border-radius: 30px;
   border: solid 5px $ltsLime;
 
-  // .img_wrapper {
-  //   width: 150px;
-  //   height: 150px;
-
-  //   .img {
-  //     border-radius: 20px;
-  //     margin-top: 5px;
-  //   }
-
   .img_wrapper {
     position: unset;
     height: 175px;
@@ -119,10 +107,8 @@ body {
     .line {
       height: 30px;
       width: 230px;
-      // background-color: blueviolet;
       position: relative;
       overflow: hidden;
-      // left: 0;
     }
 
     .line::before {
@@ -134,7 +120,6 @@ body {
       text-decoration-thickness: 4px;
       font-size: 2em;
       top: -20px;
-      // left: 0;
       color: transparent;
     }
   }
@@ -144,177 +129,21 @@ body {
   transform: rotate(-90deg);
 }
 
-.grid_section_wrapper {
-  // background-color: $blk;
-  background-color: $slimeGr;
-  border-radius: 10px;
-  width: 900px;
-  height: 700px;
-  margin: 10px auto;
-  // position: relative;
-
-  .start_wrapper {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-
-    .start_button {
-      color: white;
-      font-size: 6rem;
-      width: 5em;
-      height: 1.5em;
-      text-align: center;
-      font-family: $handjet;
-      cursor: pointer;
-    }
-
-    .start_button:hover {
-      color: $slimeGr;
-    }
-  }
-
-  .grid_card_wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(3, auto);
-    gap: 2px;
-    height: 600px;
-    width: 800px;
-    margin: 10px auto;
-    padding-top: 10px;
-    color: white;
-  }
-
-  .reset_button {
-    font-size: 2em;
-    position: absolute;
-    left: 20%;
-    padding: 5px 15px;
-    background-color: $easternBl;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .reset_button:hover {
-    background-color: red;
-  }
-
-  .counter {
-    font-size: 2.8em;
-    position: absolute;
-    left: 47%;
-  }
-
-  .timer {
-    float: right;
-    margin-right: 15px;
-    font-size: 2.8em;
-  }
-
-  .cards {
-    height: 175px;
-    width: 175px;
-    position: relative;
-    background-color: red;
-    // margin-top: -30px;
-
-    .card_face {
-      position: relative;
-      top: 0;
-      left: 0;
-    }
-
-    .card_back {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      // visibility: hidden;
-    }
-  }
-}
-
-// @media only screen and (min-width: 370px) {
-//   .card_wrapper {
-//     width: 350px;
-//     height: 150px;
-
-//     .img {
-//       height: 120px;
-//       width: 120px;
-//     }
-//   }
-// }
-
-// @media only screen and (min-width: 765px) {
-//   .fa-shuttle {
-//     position: absolute;
-//     top: 2%;
-//     color: yellow;
-//   }
-// }
-
-@media only screen and (max-width: 850px) {
-  .grid_section_wrapper {
-    max-width: 600px;
-    max-height: 600px;
-    margin-top: 10px;
-
-    .cards {
-      height: 125px;
-      width: 125px;
-    }
-
-    .grid_card_wrapper {
-      // display: grid;
-      // grid-template-columns: repeat(2, auto);
-      // grid-template-rows: repeat(6, auto);
-      // display: flex;
-      max-height: 400px;
-      max-width: 550px;
-      // margin: 0 auto;
-      background-color: red;
-    }
-
-    .reset_button {
-      left: 15%;
-      // top: 20%;
-      bottom: 0;
-    }
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   .nav_wrapper {
     display: flex;
-    background-color: red;
     position: relative;
 
     .nav_ul {
-      // position: absolute;
       display: flex;
       z-index: 0;
       width: 50%;
       height: 0;
-      // top: 0;
-      // right: 0;
       margin-top: -75px;
       margin-left: 68%;
-      background-color: yellow;
 
       li {
         margin: 0 60px;
-        background-color: peru;
       }
     }
   }
@@ -338,15 +167,12 @@ body {
   .card_wrapper {
     width: 275px;
     height: 375px;
-    // position: static;
     display: grid;
     align-items: center;
     justify-content: center;
 
     .info_wrapper {
-      // font-size: clamp();
       position: static;
-      // margin: 15px auto 0 auto;
     }
   }
 }

@@ -24,15 +24,12 @@ export default function Navbar() {
         className="rm_logo"
       />
       <FaSpaceShuttle
-        // className={clicked ? 'fa-shuttle rotate' : 'fa-shuttle'}
-        // onClick={handleClick}
         className={ishovering ? 'fa-shuttle rotate' : 'fa-shuttle'}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
-      {/* <nav className={clicked ? 'nav_wrapper' : 'nav_wrapper active'}> */}
+
       <nav className={ishovering ? 'nav_wrapper' : 'nav_wrapper active'}>
-        {/* <ul className="nav_ul"> */}
         <ul
           className={ishovering ? 'nav_ul' : 'nav_ul active'}
           onMouseEnter={handleMouseEnter}
@@ -42,13 +39,6 @@ export default function Navbar() {
               href="/"
               className="links">
               Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/Play"
-              className="links">
-              Play!
             </Link>
           </li>
         </ul>
