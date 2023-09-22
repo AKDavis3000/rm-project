@@ -67,10 +67,10 @@ export default async function Card({}) {
                 .map((char) => {
                   return (
                     <Image
-                      src={char.imgSrc}
+                      src={char.imgSrc!}
                       alt=""
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={110}
                       className="img"
                       key="1"
                     />
