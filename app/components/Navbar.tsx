@@ -7,10 +7,7 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const [ishovering, setIsHovering] = useState(false);
-  function handleMouseEnter() {
-    setIsHovering((prevState) => !prevState);
-  }
-  function handleMouseLeave() {
+  function handleMouse() {
     setIsHovering((prevState) => !prevState);
   }
 
@@ -25,15 +22,15 @@ export default function Navbar() {
       />
       <FaSpaceShuttle
         className={ishovering ? 'fa-shuttle rotate' : 'fa-shuttle'}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouse}
+        onMouseLeave={handleMouse}
       />
 
       <nav className={ishovering ? 'nav_wrapper' : 'nav_wrapper active'}>
         <ul
           className={ishovering ? 'nav_ul' : 'nav_ul active'}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}>
+          onMouseEnter={handleMouse}
+          onMouseLeave={handleMouse}>
           <li>
             <Link
               href="/"
